@@ -1,3 +1,5 @@
+
+
 Question 1.7:
 LeadPollution1980.counts = c(0.129,0.060,4.111,0.104,3.026,0.808,1.210,60.501,4.205)
 LeadPollution1990.counts = c(0.064,0.018,0.418,0.136,2.170,0.169,0.804,0.421,0.776)
@@ -25,7 +27,16 @@ Question 1.19:
 1990: 92.9,92.3,99.3,88.4,144.9,86,86.9,100.4,103.2,101.9,113.6,63.2,93.2,103.2,66.4,97.1,95.7,90.6,87,78.6,87.7,97,96.6,88,96,81.3,94.1,86.4
 1998: 106.7,115.9,108.8,109.8,109.8,110,122.1,108.7,108.5,109.8,129.1,144,102.9,99,106.1,114,128.3,107.7,105,108.4,127.4,114.1,111.4,112.5,108,120.5,102.8,114.8
 
-hist(industrialProduction1990)
-hist(industrialProduction1998)
-boxplot(industrialProduction1990.counts, horizontal=TRUE)
-boxplot(industrialProduction1998.counts, horizontal=TRUE)
+hist(industrialProduction1990.counts)
+hist(industrialProduction1998.counts)
+boxplot(industrialProduction1990.counts, horizontal=TRUE main="Histogram for Industrial Production in 1990", xlab="Index for 1990")
+boxplot(industrialProduction1998.counts, horizontal=TRUE main="Histogram for Industrial Production in 1998", xlab="Index for 1998")
+
+both of these can get me the quartiles
+quantiles(industrialProduction1998.counts)
+fivenum(industrialProduction1998.counts)
+quantile(industrialProduction1998.counts, c(0, 0.25, 0.5, 0.75, 1), type=1)
+sd() -> standard deviation
+> par(mfrow=c(2,1))
+> boxplot(difference, horizontal=TRUE, main="Boxplot for 1998 - 1990")
+> hist(difference, main="Difference between 1998 and 1990", xlab="Index for difference")
